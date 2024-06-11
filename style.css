@@ -1,0 +1,96 @@
+@import url("https://uilight.netlify.app/main.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #0f172a;
+  color: white;
+}
+
+.heading-1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 5rem;
+}
+
+.form {
+  margin-left: 2rem;
+  width: 30vw;
+}
+
+.input-container {
+  padding: 8px 0;
+}
+
+.input {
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 8px 4px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 5px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.gutter-small {
+  padding: 0.5rem 0;
+}
+
+.error {
+  border: 3px solid red;
+}
+
+.error:focus {
+  outline: 2px solid red;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.btn {
+  top: 2.8rem;
+  right: 8px;
+}
+
+.button {
+  width: 100%;
+  background-color: #db2777;
+}
+
+.gap {
+  gap: 4px;
+}
+
+.ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.list {
+  color: red;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.error-message,
+.empty-field {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  color: red;
+}
+
+.container {
+  border: none;
+  align-items: center;
+}
