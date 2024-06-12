@@ -1,15 +1,13 @@
-
 let formData = document.querySelector(".form");
 let submitButton = document.querySelector(".button");
-let showPasswordButton = document.querySelector(".btn");
+let showPasswordBtn = document.querySelector(".btn");
 let errorMessages = document.querySelectorAll(".error-message");
 let emptyFieldMessage = document.querySelectorAll(".empty-field");
 
-let fnFlag, lnFlag, eFlag, pwdFlag;
+let fnFlag, lnFlag, eFlag, pFlag;
 let firstName, lastName, email, password;
 let fnTarget, lnTarget, emailTarget, pwdTarget;
 let field;
-
 
 let nameRegex = /^[a-z]+$/i;
 let emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -47,7 +45,7 @@ formData.addEventListener("keyup", (e) => {
             firstName = lastName = email = password = "";
             break;
     }
-})
+});
 
 submitButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -105,28 +103,28 @@ submitButton.addEventListener("click", (e) => {
         if(!pwdRegex.test(password)){
             pwdTarget.classList.add("error");
             errorMessages[3].classList.remove("d-none");
-            pwdFlag = false;
+            pFlag = false;
         }else{
             errorMessages[3].classList.add("d-none");
-            pwd.classList.remove("error");
-            pwdFlag = true;
+            pwdTarget.classList.remove("error");
+            pFlag = true;
         }
     }else{
         emptyFieldMessage[3].classList.remove("d-none");
     }
 
-    if(fnFlag && lnFlag && eFlag && pwdFlag){
-        fnTarget.value = lnTarget.value = emailTarget.value = pwdTarget.value = "";
+    if(fnFlag && lnFlag && eFlag && pFlag){
+        fnTarget.value = lnTarget.value =   emailTarget.value = pwdTarget.value = "";
         window.location.href = "success.html";
     }
 });
 
-showPasswordButton.addEventListener("click", (e) => {
+showPasswordBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    if(pwdTarget.getAttribute("type") === "text"){
-        pwdTarget.setAttribute("type", "password");
+    if (pwdTarget.getAttribute("type") === "text"){
+     pwdTarget.setAttribute("type", "password");
     }else{
-        pwdTarget.setAttribute("type", "text");
+     pwdTarget.setAttribute("type", "text");
     }
 });
 
